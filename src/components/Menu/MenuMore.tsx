@@ -27,15 +27,21 @@ const MenuMore = () => {
   return (
     <div className="flex flex-row justify-between items-center gap-4 mr-4">
       <div className="flex flex-row justify-center items-center gap-4">
-        {mediaArr.map((item) => {
+        {mediaArr.map((item, index) => {
           return (
-            <Link key={item.route} href={item.route}>
-              <item.icon />
+            <Link
+              key={item.route}
+              href={item.route}
+              data-aos="fade-up-left"
+              data-aos-duration={500 * (index + 1)}
+            >
+              <item.icon className="text-black dark:text-slate-950" />
             </Link>
           );
         })}
       </div>
       <button
+        data-aos="fade-left"
         type="button"
         className="bg-slate-700 text-white rounded-full flex flex-row py-1 px-2 gap-2 items-center"
       >

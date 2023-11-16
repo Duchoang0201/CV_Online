@@ -1,4 +1,4 @@
-import IndexPage from "./_components/PersonalInfo";
+import IndexPage from "../components/IndexPage/IndexPage";
 export default function Home() {
   return (
     <main className="">

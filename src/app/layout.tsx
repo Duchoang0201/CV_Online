@@ -1,11 +1,13 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Menu from "./_components/Menu/Menu";
+import Menu from "../components/Menu/Menu";
 import CV_BG from "../../public/images/CV_BG.jpg";
 import Image from "next/image";
 import Info from "../../components/layout/Info";
+import Provider from "../../components/Providers/Provider";
 const inter = Inter({ subsets: ["latin"] });
+import "aos/dist/aos.css";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -19,26 +21,29 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className}  container mt-10  `}>
-        <div className="absolute max-w-[1200px]  z-1">
-          <Image
-            className="aspect-[1100/700]"
-            src={CV_BG}
-            alt={CV_BG.src}
-            objectFit="cover"
-          />
-        </div>
-        <div className="z-50 relative flex flex-row justify-between pt-10">
-          <div className="w-3/12">
-            <Info />
-          </div>
-          <div className="w-8/12 ">
-            <div>
-              <Menu />
+      <body className="m-0 min-h-screen transition-colors duration-1000 bg-gray-200 dark:bg-slate-800">
+        <Provider>
+          <div className={`${inter.className}  container mt-10  `}>
+            <div className="absolute max-w-[1200px]  z-1">
+              <Image
+                className="aspect-[1100/700]"
+                src={CV_BG}
+                alt={CV_BG.src}
+              />
             </div>
-            <div>{children}</div>
+            <div className="z-50 relative flex flex-row justify-around pt-10">
+              <div className="w-3/12">
+                <Info />
+              </div>
+              <div className="w-8/12 ">
+                <div>
+                  <Menu />
+                </div>
+                <div>{children}</div>
+              </div>
+            </div>
           </div>
-        </div>
+        </Provider>
       </body>
     </html>
   );
