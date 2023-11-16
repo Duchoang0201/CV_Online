@@ -1,6 +1,4 @@
-import Image from "next/image";
 import IndexPage from "./_components/PersonalInfo";
-
 export default function Home() {
   return (
     <main className="">

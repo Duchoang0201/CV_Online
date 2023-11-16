@@ -8,8 +8,6 @@ import {
 } from "@ant-design/icons";
 import Link from "next/link";
 
-type Props = {};
-
 const mediaArr = [
   {
     route: "facebook.com",
@@ -25,7 +23,7 @@ const mediaArr = [
   },
 ];
 
-const MenuMore = (props: Props) => {
+const MenuMore = () => {
   return (
     <div className="flex flex-row justify-between items-center gap-4 mr-4">
       <div className="flex flex-row justify-center items-center gap-4">

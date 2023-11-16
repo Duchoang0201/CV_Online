@@ -1,8 +1,6 @@
 import React from "react";
 
-type Props = {};
-
-function Info({}: Props) {
+function Info() {
   return <div>Info</div>;
 }
 

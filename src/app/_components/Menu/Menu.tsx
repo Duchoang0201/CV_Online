@@ -4,9 +4,7 @@ import MenuList from "./MenuList";
 import { HomeOutlined } from "@ant-design/icons";
 import MenuMore from "./MenuMore";
 
-type Props = {};
-
-const Menu = (props: Props) => {
+const Menu = () => {
   return (
     <div className="w-full flex flex-row justify-between items-center  rounded-l-lg rounded-r-sm bg-gray-50">
       <div className="flex flex-row items-center">
