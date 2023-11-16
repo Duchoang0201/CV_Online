@@ -4,6 +4,7 @@ import "./globals.css";
 import Menu from "./_components/Menu/Menu";
 import CV_BG from "../../public/images/CV_BG.jpg";
 import Image from "next/image";
+import Info from "../../components/layout/Info";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -19,7 +20,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className}  container mt-10  `}>
-        <div className="absolute max-w-[1200px]  z-0">
+        <div className="absolute max-w-[1200px]  z-1">
           <Image
             className="aspect-[1100/700]"
             src={CV_BG}
@@ -27,8 +28,10 @@ export default function RootLayout({
             objectFit="cover"
           />
         </div>
-        <div className="CONTENT z-20 relative flex flex-row justify-between pt-10">
-          <div className="w-3/12 bg-red-500 text-red-200">Info</div>
+        <div className="z-50 relative flex flex-row justify-between pt-10">
+          <div className="w-3/12">
+            <Info />
+          </div>
           <div className="w-8/12 ">
             <div>
               <Menu />
