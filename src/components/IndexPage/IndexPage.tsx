@@ -8,7 +8,7 @@ import Education from "./Education";
 function IndexPage() {
   const { setTheme, theme } = useTheme();
   return (
-    <div className="shadow-2xl dark:bg-slate-900 rounded-lg flex flex-col pt-8">
+    <div>
       <div className="flex flex-col justify-center pb-4">
         <button
           className="text-red-800 [clip-path:polygon(0%_0%,100%_0%,100%_100%)]"

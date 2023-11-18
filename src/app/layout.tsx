@@ -24,7 +24,7 @@ export default function RootLayout({
       <body className="m-0 min-h-screen transition-colors duration-1000 bg-gray-200 dark:bg-slate-800">
         <Provider>
           <div className={`${inter.className}  container mt-10  `}>
-            <div className="absolute max-w-[1200px]  z-1">
+            <div data-aos="zoom-in" className="absolute max-w-[1200px]  z-1">
               <Image
                 className="aspect-[1100/700]"
                 src={CV_BG}
@@ -39,7 +39,9 @@ export default function RootLayout({
                 <div>
                   <Menu />
                 </div>
-                <div>{children}</div>
+                <div className="shadow-2xl dark:bg-slate-900 rounded-lg flex flex-col pt-8">
+                  {children}
+                </div>
               </div>
             </div>
           </div>
