@@ -32,24 +32,6 @@ const Darkmode = () => {
               theme === "dark" ? " scale-1" : "rotate-[360deg] scale-0"
             }`}
           />
-
-          {/* <button
-            // className="text-red-800 [clip-path:polygon(0%_0%,100%_0%,100%_100%)]"
-            type="button"
-            onClick={() => {
-              setTheme("light");
-            }}
-          >
-            Light
-          </button>
-          <button
-            type="button"
-            onClick={() => {
-              setTheme("dark");
-            }}
-          >
-            Dark
-          </button> */}
         </div>
         <span
           className={`${
@@ -59,7 +41,7 @@ const Darkmode = () => {
             transition: "1s ease-out",
             clipPath:
               theme === "light"
-                ? "circle(3% at 3.8% 9.8%)"
+                ? "circle(0% at 0% 1%)"
                 : "circle(126.5% at 9% 12%)",
           }}
         />
