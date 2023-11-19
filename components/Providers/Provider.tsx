@@ -12,7 +12,7 @@ export default function Provider({ children }: props) {
     <ThemeProvider
       themes={["light", "dark"]}
       storageKey="theme"
-      defaultTheme="light"
+      defaultTheme="system"
       attribute="class"
       enableSystem={false}
     >
