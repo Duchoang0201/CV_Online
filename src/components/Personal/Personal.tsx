@@ -97,6 +97,7 @@ const PersonalCom = () => {
             {arrTech.map((item, index) => {
               return (
                 <div
+                  key={item.image.src}
                   data-aos="fade-up-left"
                   data-aos-delay={(index + 1) * 300}
                   className="w-3/12 h-[150px] rounded-3xl"
@@ -122,6 +123,7 @@ const PersonalCom = () => {
             {arrLib.map((item, index) => {
               return (
                 <Image
+                  key={item.image.src}
                   data-aos="fade-left"
                   data-aos-delay={(index + 1) * 300}
                   width={800}

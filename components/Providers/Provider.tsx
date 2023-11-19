@@ -9,7 +9,13 @@ interface props {
 
 export default function Provider({ children }: props) {
   return (
-    <ThemeProvider attribute="class" enableSystem={false}>
+    <ThemeProvider
+      themes={["light", "dark"]}
+      storageKey="theme"
+      defaultTheme="system"
+      attribute="class"
+      enableSystem={true}
+    >
       {children}
     </ThemeProvider>
   );

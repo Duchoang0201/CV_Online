@@ -10,12 +10,14 @@
   },
   "dependencies": {
     "aos": "^2.3.4",
+    "lucide-react": "^0.292.0",
     "next": "14.0.2",
     "next-themes": "^0.2.1",
     "react": "^18",
     "react-dom": "^18"
   },
   "devDependencies": {
+    "@ionic/cli": "^7.1.5",
     "@types/aos": "^3.0.7",
     "@types/node": "^20",
     "@types/react": "^18",

@@ -33,8 +33,8 @@ function Card(data: Props) {
           <div className="relative w-full">
             <Image
               className="aspect-[300/200]"
-              width={250}
-              height={100}
+              width={1000}
+              height={1000}
               src={props.image.src}
               alt="Sunset in the mountains"
             />
