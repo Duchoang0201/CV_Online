@@ -29,7 +29,9 @@ const Darkmode = () => {
           <Sun
             strokeWidth={3}
             className={`absolute w-16 h-16  dark:text-gray-800  transition-all duration-[1.5s] ${
-              theme === "dark" ? " scale-1" : "rotate-[360deg] scale-0"
+              theme === "dark" || theme === undefined
+                ? " scale-1"
+                : "rotate-[360deg] scale-0"
             }`}
           />
         </div>
