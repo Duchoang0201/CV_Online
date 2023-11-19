@@ -2,10 +2,19 @@
 
 import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 const Darkmode = () => {
   const { setTheme, theme } = useTheme();
+
+  const [themePick, setThemePick] = useState("dark");
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const storedTheme = localStorage.getItem("theme");
+      setThemePick(`${storedTheme}` || `${theme}`);
+    }
+  }, [theme]);
   return (
     <div className="absolute w-full h-full  z-20">
       {" "}
@@ -14,24 +23,21 @@ const Darkmode = () => {
           <input
             onChange={() => {
               setTheme(theme === "light" ? "dark" : "light");
+              setThemePick(theme === "light" ? "dark" : "light");
             }}
             type="checkbox"
             className="absolute opacity-0 w-full h-full z-20"
           />
           <Moon
             strokeWidth={3}
-            className={`absolute w-16 h-16 text-white  transition-all duration-[2.5s] ${
-              theme === "light" || theme === undefined
-                ? " scale-1"
-                : "rotate-[360deg] scale-0"
+            className={`absolute w-16 h-16 text-white transition-all duration-[2.5s] ${
+              themePick === "light" ? " scale-1  " : " scale-0 rotate-[360deg]"
             }`}
           />
           <Sun
             strokeWidth={3}
-            className={`absolute w-16 h-16  dark:text-gray-800  transition-all duration-[1.5s] ${
-              theme === "dark" || theme === undefined
-                ? " scale-1"
-                : "rotate-[360deg] scale-0"
+            className={`absolute w-16 h-16 text-slate-800 transition-all duration-[1.5s] ${
+              themePick === "dark" ? " scale-1 " : " scale-0 rotate-[360deg]"
             }`}
           />
         </div>
