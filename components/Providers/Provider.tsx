@@ -14,7 +14,7 @@ export default function Provider({ children }: props) {
       storageKey="theme"
       defaultTheme="system"
       attribute="class"
-      enableSystem={false}
+      enableSystem
     >
       {children}
     </ThemeProvider>

@@ -7,14 +7,11 @@ import React, { useEffect, useState } from "react";
 const Darkmode = () => {
   const { setTheme, theme } = useTheme();
 
-  const [themePick, setThemePick] = useState("dark");
-
+  const [themePick, setThemePick] = useState("light");
   useEffect(() => {
-    if (typeof window !== "undefined") {
-      const storedTheme = localStorage.getItem("theme");
-      setThemePick(`${storedTheme}` || `${theme}`);
-    }
-  }, [theme]);
+    setThemePick(`${theme}`);
+  }, [themePick]);
+
   return (
     <div className="absolute w-full h-full  z-20">
       {" "}
@@ -28,6 +25,7 @@ const Darkmode = () => {
             type="checkbox"
             className="absolute opacity-0 w-full h-full z-20"
           />
+
           <Moon
             strokeWidth={3}
             className={`absolute w-16 h-16 text-white transition-all duration-[2.5s] ${
