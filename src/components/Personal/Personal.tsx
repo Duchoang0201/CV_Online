@@ -61,10 +61,11 @@ const PersonalCom = () => {
           data-aos="fade-right"
           className="flex flex-row items-center relative "
         >
-          <div className="w-4 h-10 rounded-sm bg-slate-800" />
+          <div className="w-4 h-10 rounded-sm bg-slate-800 dark:bg-white ml-3" />
+
           <h1 className="font-bold text-[30px] pl-3">Over view</h1>
 
-          <span className="after:absolute after:w-2/6 after:h-1 after:bg-green-900 after:left-0 after:bottom-1 after:ml-7"></span>
+          <span className="after:absolute after:w-2/6 after:h-1 after:bg-green-900 after:left-0 after:bottom-1 after:ml-10" />
         </div>
         <p
           data-aos="fade-left"
@@ -81,12 +82,12 @@ const PersonalCom = () => {
       <div id="overview" className="">
         <div
           data-aos="fade-right"
-          className="flex flex-row items-center relative"
+          className="flex flex-row gap-4 items-center relative"
         >
-          <div className="w-4 h-10 rounded-sm bg-slate-800" />
+          <div className="w-4 h-10 rounded-sm bg-slate-800 dark:bg-white ml-3" />
           <h1 className="font-bold text-[30px] pl-3">Skills</h1>
 
-          <span className="after:absolute after:w-2/6 after:h-1 after:bg-green-900 after:left-0 after:bottom-1 after:ml-7"></span>
+          <span className="after:absolute after:w-2/6 after:h-1 after:bg-green-900 after:left-0 after:bottom-1 after:ml-10"></span>
         </div>
         <div>
           <h3 data-aos="fade-right" className="font-bold  pl-3">

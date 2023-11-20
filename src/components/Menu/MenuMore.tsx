@@ -10,11 +10,11 @@ import Link from "next/link";
 
 const mediaArr = [
   {
-    route: "facebook.com",
+    route: `https://www.facebook.com/BinKaki4/`,
     icon: FacebookOutlined,
   },
   {
-    route: "linked.com",
+    route: "https://www.linkedin.com/in/binkaki/",
     icon: LinkedinOutlined,
   },
   {
@@ -40,7 +40,8 @@ const MenuMore = () => {
           );
         })}
       </div>
-      <button
+      <a
+        href="mailto:duchoang020120@email.com"
         data-aos="fade-left"
         type="button"
         className="bg-slate-700 text-white rounded-full flex flex-row py-1 px-2 gap-2 items-center"
@@ -49,7 +50,7 @@ const MenuMore = () => {
         <div className="bg-white w-8 h-8 rounded-full flex items-center justify-center">
           <SendOutlined className="text-slate-950 -rotate-45" />
         </div>
-      </button>
+      </a>
     </div>
   );
 };

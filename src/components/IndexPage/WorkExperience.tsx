@@ -27,7 +27,7 @@ function WorkExperience() {
     {
       id: 3,
       iat: "May 10th 2022",
-      exp: "November 6th 2023",
+      exp: "November 6th 2022",
       company: "Atax Company",
       position: "Auditor assitant",
     },

@@ -12,15 +12,15 @@ function Education() {
   const arrEdu = [
     {
       id: 1,
-      iat: "June 3rd 2023",
-      exp: "Current",
-      college: "Da Nang University ",
+      iat: "November 1st 2023",
+      exp: " April 18th 2023",
+      college: "Aptech",
     },
     {
       id: 2,
-      iat: "March 2nd 2023",
-      exp: "May 15th 2023",
-      college: "Aptech",
+      iat: "August 05th 2018",
+      exp: "July 19th 2022",
+      college: "Da Nang University ",
     },
   ];
   return (

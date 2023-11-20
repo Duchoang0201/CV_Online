@@ -31,9 +31,9 @@ const items = [
     href: "personal",
   },
   {
-    label: "CONTACT",
-    key: "contact",
-    href: "contact",
+    label: "MORE",
+    key: "more",
+    href: "more",
   },
 ];
 
